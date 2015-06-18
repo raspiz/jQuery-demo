@@ -157,6 +157,8 @@ $(document).ready(function(){
 			}
 
 			count = 0;
+
+			$("#dfList > ol > li:even").css("background", "#F49C1F");			
 	   	});	 
 
 
@@ -217,6 +219,8 @@ $(document).ready(function(){
 		   		}
 
 		   		count = 0;
+
+		   		$("#dfList > ol > li:even").css("background", "#F49C1F");
 		   	});	
 		});
 
@@ -249,6 +253,8 @@ $(document).ready(function(){
 		   		}
 
 		   		count = 0;
+
+		   		$("#dfList > ol > li:even").css("background", "#F49C1F");
 		   	});	
 		});
 
