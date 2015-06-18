@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+		<title>Some jQuery Stuff</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="./js/custom.js"></script>
+	
+		<style>
+			.selected { color:red; }
+			.highlight {background:blue;}
+			.prettyList {background:#99CCFF;font-size:14;}
+			.dfGuys li{border:black solid 1px; list-style-type:none; width:335px; background:#FFCC99; margin-top:5px;}
+			.fakeLink {color:blue; display:inline-block;cursor:pointer;}
+		</style>
+
+	</head>	
+
+	<body>
+		<h1>Hello</h1>
+
+		<div>
+			<textarea id="textInput" rows="3" cols="50" placeholder="Enter jQuery here!" ></textarea>
+		</div>
+		<div>
+			<button id="inputBtn">
+				Run jQuery!
+			</button>
+		</div>
+
+
+		<input type="hidden" name="foo" value="bar">
+
+		<div id="mydiv">
+			Click on this to see a dialogue box.
+		</div>
+
+		<div>
+			<em title="Bold and Brave">This is the first paragraph.</em>
+			<p class="myclass">This is a paragraph.</p>
+			<p id="myid">This is a second paragraph.</p>
+			<p>This is a third paragraph.</p>
+			<div id="divid"></div>
+		</div>
+
+		<div>
+			<img id="myimg" src="wrongpath.png" alt="Sample Image" />
+			<img id="dragImg" src="./images/jquery.png" alt="Draggable Image" style="width:100px;" />
+		</div>
+
+		<div>
+			<ol>
+				<li class="top">list item 1</li>
+				<li class="top">list item 2</li>
+				<li class="middle">list item 3</li>
+				<li class="middle">list item 4</li>
+				<li class="bottom">list item 5</li>
+				<li class="bottom">list item 6</li>
+			</ol>
+		</div>
+		
+		<div id="emptyList"></div>
+
+
+
+		<div id="emptyDiv"></div>
+
+		<div id="errorSpot"></div>
+
+		<div id="btnDiv">
+			<button id="doAjax" >Hit me!</button>
+			<button id-"moreAjax">Do it!</button>
+			<button id="ajaxBtn3">Give it to me!</button>
+			<button id="btnPrompt">Prompt me!</button>
+			<br><br>
+			<button id="dfBtn">Tell me about Dataforma</button>
+			<button id="dfPagin">Paginate results</button>
+		<div>	
+
+		<div id="dfList"></div>
+
+
+		<div id="dialog-confirm" title="Do you wish to do this?">
+			You have been given a choice. It is incredibly important and you must decide now!
+		</div>		
+
+<!--
+<div id="dialog-confirm" title="Empty the recycle bin?">
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>These items will be permanently deleted and cannot be recovered. Are you sure?</p>
+</div>-->
+	</body>
+
+	
+</html>

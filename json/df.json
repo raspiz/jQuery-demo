@@ -1,0 +1,146 @@
+{
+	"0": {
+		"FirstName": "Mitch",
+		"LastName": "Gaydash",
+		"Hair": "Black",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "Loves hot sauce",
+		"Position": "Developer"
+	},
+	"1": {
+		"FirstName": "Vince",
+		"LastName": "Moley",
+		"Hair": "Black",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "He's the boss",
+		"Position": "Lead Developer"
+	},
+	"2": {
+		"FirstName": "Rob",
+		"LastName": "Bruder",
+		"Hair": "Brown",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "AKA: Roberto Delano Burrito",
+		"Position": "Developer"
+	},
+	"3": {
+		"FirstName": "Travis",
+		"LastName": "Caro",
+		"Hair": "Brown",
+		"Employment": "Temporary",
+		"Status": "Intern",
+		"Personal": "Is quite tall",
+		"Position": "Developer"
+	},
+	"4": {
+		"FirstName": "Dan",
+		"LastName": "Muckerman",
+		"Hair": "Brown",
+		"Employment": "Temporary",
+		"Status": "Intern",
+		"Personal": "Enjoys Doctor Who",
+		"Position": "Developer"
+	},
+	"5": {
+		"FirstName": "Aaron",
+		"LastName": "Whitmer",
+		"Hair": "Brown",
+		"Employment": "Temporary",
+		"Status": "Intern",
+		"Personal": "Is quite short",
+		"Position": "Developer"
+	},
+	"6": {
+		"FirstName": "John",
+		"LastName": "Van Sickle",
+		"Hair": "Blonde",
+		"Employment": "Temporary",
+		"Status": "Former Intern",
+		"Personal": "Owns all Apple products",
+		"Position": "Developer"
+	},
+	"7": {
+		"FirstName": "Dan",
+		"LastName": "Mashuda",
+		"Hair": "Brown",
+		"Employment": "Temporary",
+		"Status": "Former Intern",
+		"Personal": "Enjoys rails",
+		"Position": "Developer"
+	},
+	"8": {
+		"FirstName": "Ben",
+		"LastName": "Appleby",
+		"Hair": "Brown",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "Enjoys wearing hats and sunglasses",
+		"Position": "Developer"
+	},
+	"9": {
+		"FirstName": "Jordan",
+		"LastName": "Godfried",
+		"Hair": "Brown",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "Loves to eat out",
+		"Position": "Template Design"
+	},
+	"10": {
+		"FirstName": "John",
+		"LastName": "Wolfe",
+		"Hair": "Brown",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "The real John Wolfe",
+		"Position": "Eating sandwiches"
+	},
+	"11": {
+		"FirstName": "Shelly",
+		"LastName": "Unknown",
+		"Hair": "Blonde",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "'The Gatekeeper'",
+		"Position": "Human Resources"
+	},
+	"12": {
+		"FirstName": "Matt",
+		"LastName": "Sturmer",
+		"Hair": "Brown",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "Recently married",
+		"Position": "Quality Assurance"
+	},
+	"13": {
+		"FirstName": "Mark",
+		"LastName": "Zleznock",
+		"Hair": "Brown",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "The big boss",
+		"Position": "CEO"
+	},
+	"14": {
+		"FirstName": "Monica",
+		"LastName": "Unknown",
+		"Hair": "Brown",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "Travels a lot",
+		"Position": "Customer Training"
+	},
+	"15": {
+		"FirstName": "Amanda",
+		"LastName": "Unknown",
+		"Hair": "Brown",
+		"Employment": "Full Time",
+		"Status": "Graduate",
+		"Personal": "Sorts Roburrito Orders",
+		"Position": "Template Design"
+	}			
+}

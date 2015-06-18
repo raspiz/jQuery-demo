@@ -1,0 +1,59 @@
+{
+	"Actions": {
+		"Create": {
+			"SourceJSP": {"1": "home.jsp"},
+			"DestinationJSP": {"1":"edit.jsp"},
+			"Goal": {"1":"Add a new user to database"},
+			"DBType": {"1":"None"},
+			"ExplicitBO": {"1":"UserForm"}
+		},
+		"Edit": {			
+			"SourceJSP": {"1": "home.jsp", "2": "view.jsp", "3": "search.jsp"},
+			"DestinationJSP": {"1":"edit.jsp"},
+			"Goal": {"1":"Update existing user data"},
+			"DBType": {"1":"Query"},
+			"ExplicitBO": {"1": "IdQuery","2": "UserForm"}
+		},
+		"Delete": {
+			"SourceJSP": {"1": "home.jsp", "2": "view.jsp", "3":"search.jsp"},
+			"DestinationJSP": {"1":"home.jsp"},
+			"Goal": {"1":"Remove a user from database"},
+			"DBType": {"1":"Submission"},
+			"ExplicitBO": {"1": "IdQuery"}
+		},
+		"Search": {
+			"SourceJSP": {"1":"home.jsp","2": "search.jsp"},
+			"DestinationJSP": {"1":"search.jsp"},
+			"Goal": {"1":"Display database results from search string"},
+			"DBType": {"1":"Query"},
+			"ExplicitBO": {"1": "SearchFrom", "2": "SearchQuery"}
+		},
+		"ViewSingle": {
+			"SourceJSP": {"1":"home.jsp","2": "edit.jsp","3":"search.jsp"},
+			"DestinationJSP": {"1":"view.jsp"},
+			"Goal": {"1":"View all details of a single user"},
+			"DBType": {"1":"Query"},
+			"ExplicitBO": {"1": "IdQuery", "2": "UserQuery"}
+		},
+		"ViewAll": {
+			"SourceJSP": {"1":"home.jsp","2":"view.jsp","3":"edit.jsp"},
+			"DestinationJSP": {"1":"home.jsp"},
+			"Goal": {"1":"View paginated list of all users"},
+			"DBType": {"1":"Submission"},
+			"ExplicitBO": {"1": "AllUserQuery"}
+		},
+		"Pagination": {
+			"SourceJSP": {"1":"home.jsp","2":"search.jsp"},
+			"DestinationJSP": {"1":"home.jsp","2":"search.jsp"},
+			"Goal": {"1":"View next/previous set of queried data"},
+			"DBType": {"1":"Query"}
+		},
+		"Save": {
+			"SourceJSP": {"1":"edit.jsp"},
+			"DestinationJSP": {"1":"view.jsp"},
+			"Goal": {"1":"Submit form data for new user or update of existing user"},
+			"DBType": {"1":"Submission"},
+			"ExplicitBO": {"1": "UserForm"}		
+		}
+	}
+}
