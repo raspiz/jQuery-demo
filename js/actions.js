@@ -12,11 +12,11 @@ $(document).ready(function(){
 	 		$("#" + key + "Shell").addClass("actionDets");
 
 	 		$.each(data.Actions[key], function (ikey, ival) {
-	 			$("#action" + key).append("<div style='color:red;' class='padme' id='" + key + ikey + "'>" + ikey +"</div>");
+	 			$("#action" + key).append("<div class='actionSub padme' id='" + key + ikey + "'>" + ikey +"</div>");
 
 		 		$.each(data.Actions[key][ikey], function (jkey, jval) {
 		 			//alert(jkey);
-		 			$("#" + key + ikey).append("<div style='color:green;' class='padme'>" + jval + "</div>");
+		 			$("#" + key + ikey).append("<div class='actionSubDet padme'>" + jval + "</div>");
 		 				 		
 		 		});
 	 		}); 			
