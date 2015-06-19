@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Skeleton Project Action Classes</title>
+	</head>
+	<body>
+		<h1>Action Classes</h1>
+
+		<div>
+			<h2>AddEdit</h2>
+			<h3>Fields</h3>
+				<ul>
+					<li>UserForm BusinessObject</li>
+				</ul>
+			<h3>Methods</h3>
+			<ul>
+				<li>
+					<h4>createUser()</h4>		
+					<ul>
+						<li>
+							Do we need to hit service layer?
+						</li>
+						<li>
+							put a string or html string onto resultData indicating that this is a create
+						</li>
+						<li>
+							Does the empty EBO (UserForm) need passed back down?
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h4>editUser()</h4>		
+					<ul>
+						<li>
+							id is passed in from client side and set on UserForm
+						</li>
+						<li>
+							util service UtilUserSearchService.retrieveUserById() called. UserForm object with id will be passed in as a parameter.
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h4>saveUser()</h4>		
+					<ul>
+						<li>
+							UserForm fields will be set by struts based on user's input
+						</li>
+						<li>
+							pass UserForm object to util service
+							if userForm.id is empty, call UtilUserSearchService.insertUser()
+							<br>
+							else call UtilUserSearchService.updateUser()
+							<br>
+							<br>
+							Should the if/else occur elsewhere?
+						</li>
+						<li>
+							upon success, do an action redirect to show view of user based on the id
+						</li>
+					</ul>
+				</li>
+				<li>
+					<h4>deleteUser()</h4>		
+					<ul>
+						<li>
+							id will be set in UserForm by struts
+						</li>
+						<li>
+							UtilUserSearchService.removeUser() will be called, passing in UserForm
+						</li>
+						<li>
+							Before removing, util layer will put user's name into UserForm for display once delete is completed
+						</li>
+						<li>
+							upon success, go to home.jsp and display message to user at top of screen of successful removal and deleted user's name
+						</li>
+					</ul>
+				</li>				
+			</ul>
+		</div>
+
+	</body>
+</html>
+

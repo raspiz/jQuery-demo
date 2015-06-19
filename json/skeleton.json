@@ -3,6 +3,8 @@
 		"Create": {
 			"SourceJSP": {"1": "home.jsp"},
 			"DestinationJSP": {"1":"edit.jsp"},
+			"ActionClass": {"1": "AddEdit"},
+			"ActionMethod": {"1": "createUser()"},
 			"Goal": {"1":"Add a new user to database"},
 			"DBType": {"1":"None"},
 			"ExplicitBO": {"1":"UserForm"}
@@ -10,6 +12,8 @@
 		"Edit": {			
 			"SourceJSP": {"1": "home.jsp", "2": "view.jsp", "3": "search.jsp"},
 			"DestinationJSP": {"1":"edit.jsp"},
+			"ActionClass": {"1": "AddEdit"},
+			"ActionMethod": {"1": "editUser()"},			
 			"Goal": {"1":"Update existing user data"},
 			"DBType": {"1":"Query"},
 			"ExplicitBO": {"1": "IdQuery","2": "UserForm"}
@@ -17,9 +21,11 @@
 		"Delete": {
 			"SourceJSP": {"1": "home.jsp", "2": "view.jsp", "3":"search.jsp"},
 			"DestinationJSP": {"1":"home.jsp"},
+			"ActionClass": {"1": "AddEdit"},
+			"ActionMethod": {"1": "deleteUser()"},			
 			"Goal": {"1":"Remove a user from database"},
 			"DBType": {"1":"Submission"},
-			"ExplicitBO": {"1": "IdQuery"}
+			"ExplicitBO": {"1": "IdQuery", "2": "UserForm"}
 		},
 		"Search": {
 			"SourceJSP": {"1":"home.jsp","2": "search.jsp"},
@@ -51,6 +57,8 @@
 		"Save": {
 			"SourceJSP": {"1":"edit.jsp"},
 			"DestinationJSP": {"1":"view.jsp"},
+			"ActionClass": {"1": "AddEdit"},
+			"ActionMethod": {"1": "saveUser()"},			
 			"Goal": {"1":"Submit form data for new user or update of existing user"},
 			"DBType": {"1":"Submission"},
 			"ExplicitBO": {"1": "UserForm"}		
