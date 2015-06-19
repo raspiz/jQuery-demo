@@ -32,6 +32,7 @@
 				background-color: #0000FF;
 				border-radius: 5px;
 			}	
+			.form {border: black solid 1px;}
 
 		</style>
 
@@ -62,6 +63,21 @@
 		</div>		
 
 		<div id="clickable">Hey Click Me!</div>
+
+
+		<div id="formDiv">
+			<form id="userForm" method="POST" action="this.action">
+
+				<label name="First Name:" for="fname">First Name:</label>
+				<input type="text" id="fname" name=form.first />
+
+				<br>
+				<button type="submit" form="userForm">Submit</button>
+			</form>
+		</div>
+
+
+
 
 		<div id="blockBox">
 			<div id="orange" class="orgSquare block"></div>
