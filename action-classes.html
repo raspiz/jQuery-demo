@@ -1,22 +1,35 @@
 <!doctype html>
 <html>
 	<head>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>
+		<script type="text/javascript" src="./js/action-classes.js">
+		</script>	
 		<title>Skeleton Project Action Classes</title>
+		<style>
+		.actions{width:500px;border:black solid 1px;}
+
+		</style>
 	</head>
 	<body>
 		<h1>Action Classes</h1>
 
-		<div>
-			<h2>AddEdit</h2>
-			<h3>Fields</h3>
+		<div class="actions">
+			<h3>AddEdit</h3>
+			<ul>
+				<li>Fields</li>
 				<ul>
 					<li>UserForm BusinessObject</li>
 				</ul>
-			<h3>Methods</h3>
+			</ul>			
 			<ul>
-				<li>
-					<h4>createUser()</h4>		
-					<ul>
+				<li>Methods</li>
+				<ul>
+					<li>createUser()</li>		
+					<ul>					
+						<li>
+							Prepares UserForm to be presented to user. Doesn't actually create anything or hit database.	
+						</li>
 						<li>
 							Do we need to hit service layer?
 						</li>
@@ -27,29 +40,29 @@
 							Does the empty EBO (UserForm) need passed back down?
 						</li>
 					</ul>
-				</li>
-				<li>
-					<h4>editUser()</h4>		
+				</ul>
+				<ul>
+					<li>editUser()</li>		
 					<ul>
 						<li>
 							id is passed in from client side and set on UserForm
 						</li>
 						<li>
-							util service UtilUserSearchService.retrieveUserById() called. UserForm object with id will be passed in as a parameter.
+							util service retrieveUserById() called. UserForm object with id will be passed in as a parameter.
 						</li>
 					</ul>
-				</li>
-				<li>
-					<h4>saveUser()</h4>		
+				</ul>
+				<ul>
+					<li>saveUser()</li>		
 					<ul>
 						<li>
 							UserForm fields will be set by struts based on user's input
 						</li>
 						<li>
 							pass UserForm object to util service
-							if userForm.id is empty, call UtilUserSearchService.insertUser()
+							if userForm.id is empty, call insertUser()
 							<br>
-							else call UtilUserSearchService.updateUser()
+							else call updateUser()
 							<br>
 							<br>
 							Should the if/else occur elsewhere?
@@ -58,15 +71,15 @@
 							upon success, do an action redirect to show view of user based on the id
 						</li>
 					</ul>
-				</li>
-				<li>
-					<h4>deleteUser()</h4>		
+				</ul>
+				<ul>
+					<li>deleteUser()</li>		
 					<ul>
 						<li>
 							id will be set in UserForm by struts
 						</li>
 						<li>
-							UtilUserSearchService.removeUser() will be called, passing in UserForm
+							removeUser() will be called, passing in UserForm
 						</li>
 						<li>
 							Before removing, util layer will put user's name into UserForm for display once delete is completed
@@ -75,9 +88,66 @@
 							upon success, go to home.jsp and display message to user at top of screen of successful removal and deleted user's name
 						</li>
 					</ul>
-				</li>				
+				</ul>				
 			</ul>
 		</div>
+		<div class="actions">
+			<h3>ViewUser</h3>
+			<ul>
+				<li>Fields</li>
+					<ul>
+						<li>UserQuery BusinessObject</li>
+					</ul>
+				<li>Methods</li>
+				<ul>
+					<li>retrieveUserById()</li>		
+					<ul>
+						<li>
+							id will be passed in as a struts param
+						</li>
+						<li>
+							a UserQuery object can be set with the Id to be passed down, the util layer will set the rest of the data needed for display..
+						</li>
+						<li>
+							calls retrieveUserById() in util layer
+						</li>
+					</ul>		
+				</ul>
+			</ul>
+		</div>		
+		<div class="actions">
+			<h3>ViewMany</h3>
+			<ul>
+				<li>Fields</li>
+					<ul>
+						<li>UserListQuery BusinessObject</li>
+						<li>searchString String</li>
+						<li>limit Integer</li>
+						<li>offset Integer</li>
+					</ul>
+				<li>Methods</li>
+				<ul>
+					<li>retrieveAllUsers()</li>		
+						<ul>
+							<li>
+								offset and limit will be passed into retrieveAllUsers() in util layer
+							</li>
+							<li>
+								util layer will create an ArrayList of users which will be returned to action layer
+							</li>
+						</ul>
+					<li>retrieveUsersQuery()</li>		
+						<ul>
+							<li>
+								searchString, offset, and limit will be passed into retrieveUsersByQuery() in util layer
+							</li>
+							<li>
+								util layer will create an ArrayList of users which will be returned to action layer
+							</li>
+						</ul>
+				</ul>
+			</ul>
+		</div>			
 
 	</body>
 </html>

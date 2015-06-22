@@ -30,29 +30,38 @@
 		"Search": {
 			"SourceJSP": {"1":"home.jsp","2": "search.jsp"},
 			"DestinationJSP": {"1":"search.jsp"},
+			"ActionClass": {"1": "ViewMany"},
+			"ActionMethod": {"1": "retrieveUsersQuery()"},				
 			"Goal": {"1":"Display database results from search string"},
 			"DBType": {"1":"Query"},
-			"ExplicitBO": {"1": "SearchFrom", "2": "SearchQuery"}
+			"ExplicitBO": {"1": "UserListQuery"}
 		},
 		"ViewSingle": {
 			"SourceJSP": {"1":"home.jsp","2": "edit.jsp","3":"search.jsp"},
 			"DestinationJSP": {"1":"view.jsp"},
+			"ActionClass": {"1": "ViewUser"},
+			"ActionMethod": {"1": "retrieveUserById()"},				
 			"Goal": {"1":"View all details of a single user"},
 			"DBType": {"1":"Query"},
-			"ExplicitBO": {"1": "IdQuery", "2": "UserQuery"}
+			"ExplicitBO": {"1": "UserQuery"}
 		},
 		"ViewAll": {
 			"SourceJSP": {"1":"home.jsp","2":"view.jsp","3":"edit.jsp"},
 			"DestinationJSP": {"1":"home.jsp"},
+			"ActionClass": {"1": "ViewMany"},
+			"ActionMethod": {"1": "retrieveAllUsers()"},				
 			"Goal": {"1":"View paginated list of all users"},
 			"DBType": {"1":"Submission"},
-			"ExplicitBO": {"1": "AllUserQuery"}
+			"ExplicitBO": {"1": "UserListQuery"}
 		},
 		"Pagination": {
 			"SourceJSP": {"1":"home.jsp","2":"search.jsp"},
 			"DestinationJSP": {"1":"home.jsp","2":"search.jsp"},
+			"ActionClass": {"1": "ViewMany"},
+			"ActionMethod": {"1": "retrieveAllUsers()"},				
 			"Goal": {"1":"View next/previous set of queried data"},
-			"DBType": {"1":"Query"}
+			"DBType": {"1":"Query"},
+			"ExplicitBO": {"1": "UserListQuery"}			
 		},
 		"Save": {
 			"SourceJSP": {"1":"edit.jsp"},
