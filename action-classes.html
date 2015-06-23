@@ -8,145 +8,147 @@
 		<title>Skeleton Project Action Classes</title>
 		<style>
 		.actions{width:500px;border:black solid 1px;}
-
+		.methodDiv > div {border: black solid 1px; background-color:#8CBCD1; width: 200px;}
 		</style>
 	</head>
 	<body>
 		<h1>Action Classes</h1>
 
-		<div class="actions">
-			<h3>AddEdit</h3>
-			<ul>
-				<li>Fields</li>
+		<div class="actions">			
+			<div class="methodDiv">
+				<div>File</div>
 				<ul>
-					<li>UserForm BusinessObject</li>
-				</ul>
-			</ul>			
-			<ul>
-				<li>Methods</li>
-				<ul>
-					<li>createUser()</li>		
-					<ul>					
-						<li>
-							Prepares UserForm to be presented to user. Doesn't actually create anything or hit database.	
-						</li>
-						<li>
-							Do we need to hit service layer?
-						</li>
-						<li>
-							put a string or html string onto resultData indicating that this is a create
-						</li>
-						<li>
-							Does the empty EBO (UserForm) need passed back down?
-						</li>
-					</ul>
-				</ul>
-				<ul>
-					<li>editUser()</li>		
+					<li>Fields</li>
 					<ul>
-						<li>
-							id is passed in from client side and set on UserForm
-						</li>
-						<li>
-							util service retrieveUserById() called. UserForm object with id will be passed in as a parameter.
-						</li>
+						<li>UserForm BusinessObject</li>
+						<li>userId int</li>
 					</ul>
-				</ul>
+				</ul>			
 				<ul>
-					<li>saveUser()</li>		
+					<li class="methodLi">Methods</li>
 					<ul>
-						<li>
-							UserForm fields will be set by struts based on user's input
-						</li>
-						<li>
-							pass UserForm object to util service
-							if userForm.id is empty, call insertUser()
-							<br>
-							else call updateUser()
-							<br>
-							<br>
-							Should the if/else occur elsewhere?
-						</li>
-						<li>
-							upon success, do an action redirect to show view of user based on the id
-						</li>
-					</ul>
-				</ul>
-				<ul>
-					<li>deleteUser()</li>		
-					<ul>
-						<li>
-							id will be set in UserForm by struts
-						</li>
-						<li>
-							removeUser() will be called, passing in UserForm
-						</li>
-						<li>
-							Before removing, util layer will put user's name into UserForm for display once delete is completed
-						</li>
-						<li>
-							upon success, go to home.jsp and display message to user at top of screen of successful removal and deleted user's name
-						</li>
-					</ul>
-				</ul>				
-			</ul>
-		</div>
-		<div class="actions">
-			<h3>ViewUser</h3>
-			<ul>
-				<li>Fields</li>
-					<ul>
-						<li>UserQuery BusinessObject</li>
-					</ul>
-				<li>Methods</li>
-				<ul>
-					<li>retrieveUserById()</li>		
-					<ul>
-						<li>
-							id will be passed in as a struts param
-						</li>
-						<li>
-							a UserQuery object can be set with the Id to be passed down, the util layer will set the rest of the data needed for display..
-						</li>
-						<li>
-							calls retrieveUserById() in util layer
-						</li>
-					</ul>		
-				</ul>
-			</ul>
-		</div>		
-		<div class="actions">
-			<h3>ViewMany</h3>
-			<ul>
-				<li>Fields</li>
-					<ul>
-						<li>UserListQuery BusinessObject</li>
-						<li>searchString String</li>
-						<li>limit Integer</li>
-						<li>offset Integer</li>
-					</ul>
-				<li>Methods</li>
-				<ul>
-					<li>retrieveAllUsers()</li>		
-						<ul>
+						<li>createUser()</li>		
+						<ul>					
 							<li>
-								offset and limit will be passed into retrieveAllUsers() in util layer
+								Prepares UserForm to be presented to user. Doesn't actually create anything or hit database.	
 							</li>
 							<li>
-								util layer will create an ArrayList of users which will be returned to action layer
+								Do we need to hit service layer?
+							</li>
+							<li>
+								put a string or html string onto resultData indicating that this is a create
+							</li>
+							<li>
+								Does the empty EBO (UserForm) need passed back down?
 							</li>
 						</ul>
-					<li>retrieveUsersQuery()</li>		
+					</ul>
+					<ul>
+						<li>editUser()</li>		
 						<ul>
 							<li>
-								searchString, offset, and limit will be passed into retrieveUsersByQuery() in util layer
+								id is passed in from client side and set on UserForm
 							</li>
 							<li>
-								util layer will create an ArrayList of users which will be returned to action layer
+								util service retrieveUserEdit() called. id will be passed in as a parameter.
 							</li>
 						</ul>
+					</ul>
+					<ul>
+						<li>saveUser()</li>		
+						<ul>
+							<li>
+								UserForm fields will be set by struts based on user's input
+							</li>
+							<li>
+								pass UserForm object to util service
+								if userForm.id is empty, call insertUser()
+								<br>
+								else call updateUser()
+								<br>
+								<br>
+								Should the if/else occur elsewhere?
+							</li>
+							<li>
+								upon success, do an action redirect to show view of user based on the id
+							</li>
+						</ul>
+					</ul>
+					<ul>	
+						<li>retrieveUserById()</li>		
+						<ul>
+							<li>
+								id will be passed in as a struts param
+							</li>
+							<li>
+								the id is to be passed down
+							</li>
+							<li>
+								calls retrieveUserById() in util layer
+							</li>
+						</ul>	
+					</ul>						
+					<ul>
+						<li>deleteUser()</li>		
+						<ul>
+							<li>
+								id will be set in UserForm by struts
+							</li>
+							<li>
+								removeUser() will be called, passing in id
+							</li>
+							<li>
+								Before removing, util layer will put user's name into UserView object for display once delete is completed
+							</li>
+							<li>
+								upon success, go to home.jsp and display message to user at top of screen of successful removal and deleted user's name
+							</li>
+						</ul>
+					</ul>				
 				</ul>
-			</ul>
+			</div>
+		</div>	
+		<div class="actions">
+			<div class="methodDiv">		
+				<div>Query</div>
+				<ul>
+					<li>Fields</li>
+						<ul>
+							<li>UserListQuery BusinessObject</li>
+							<li>searchString String</li>
+							<li>limit Integer</li>
+							<li>offset Integer</li>
+						</ul>
+				</ul>					
+					<ul>
+						<li class="methodLi">Methods</li>
+						<ul>
+							<li>retrieveAllUsers()</li>		
+								<ul>
+									<li>
+										offset and limit will be passed into retrieveAllUsers() in util layer
+									</li>
+									<li>
+										util layer will create an ArrayList of users which will be returned to action layer
+									</li>
+								</ul>
+						</ul>
+						<ul>
+							<li>retrieveUsersQuery()</li>		
+							<ul>
+								<li>
+									UserQuery object fields will be set based on which checkboxes were clicked(these will have available fields that are set by struts when action loads)
+								</li>
+								<li>
+									UserQuery object, offset, and limit will be passed into retrieveUsersByQuery() in util layer
+								</li>
+								<li>
+									util layer will create an ArrayList of users which will be returned to action layer
+								</li>
+							</ul>
+						</ul>
+					</ul>
+			</div>
 		</div>			
 
 	</body>

@@ -4,308 +4,344 @@
 
 		<title>Skeleton Project Util Service Class</title>
 		<style>
-			.method {list-style-type: none;padding-left:0px;}
+			.method {list-style-type: none;padding-left:0px;border:black solid 1px; background-color:#F9A7AC;width: 200px;}
 		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>		
+		<script>
+			$(document).ready(function(){
+
+			 	$(".method").siblings("ul").css({"border": "black solid 1px", "background-color" : "#F7CFD1"});
+
+
+			 	$(".method").click(function() {
+			 		if ($(this).siblings("ul").is(":visible")){
+			 			$(this).siblings("ul").fadeOut(600);//"slow");
+			 		} else {
+			 			$(this).siblings("ul").fadeIn(600);//"slow");
+			 		}
+			 	});	
+
+
+			});
+		</script>
 	</head>
 	<body>
 		<h1>UtilUserSearchService Class Methods</h1>
 		
 		<ul>
-			<li class="method">
-				retrieveUserById()
+			<li class="method">retrieveUserById()</li>
+			<ul>
+				<li>Called by:</li>
 				<ul>
-					<li>Called by:</li>
-					<ul>
-						<li>AddEdit.editUser()</li>
-						<li>ViewUser.retrieveUserById()</li>
-					</ul>
+					<li>File.retrieveUserById()</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
 				<ul>
-					<li>Params:</li>
-					<ul>
-						<li>
-							Business object (either UserForm or UserQuery)
-						</li>
-					</ul>
+					<li>
+						userId int
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
 				<ul>
-					<li>Returns:</li>
-					<ul>
-						<li>
-							void
-						</li>
-					</ul>
+					<li>
+						UserView Business Object
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
 				<ul>
-					<li>Purpose:</li>
-					<ul>
-						<li>
-						Sets data on a business object for a specific user based on ID. This will either need to be broken into 2 methods or have checks to see what values the passed in EBO needs since the 2 methods that call it require different data.
-						</li>
-					</ul>
+					<li>
+					Sets data on a business object for a specific user based on ID. Business object is returned for ViewSingle action
+					</li>
 				</ul>
-			</li>
+			</ul>			
 		</ul>
 
 		<ul>
-			<li class="method">
-				retrieveUserByQuery()
+			<li class="method">retrieveUserEdit()</li>
+			<ul>
+				<li>Called by:</li>
 				<ul>
-					<li>Called by:</li>
-					<ul>
-						<li>ViewMany.retrieveUsersByQuery()	</li>
-					</ul>
+					<li>File.editUser()</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
 				<ul>
-					<li>Params:</li>
-					<ul>
-						<li>String representing search query</li>
-						<li>Integer for offset</li>
-						<li>Integer for limit</li>
-					</ul>
+					<li>
+						userId int
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
 				<ul>
-					<li>Returns:</li>
-					<ul>
-						<li>
-							ArrayList of UserListQuery EBOs
-						</li>
-					</ul>
+					<li>
+						UserForm Business Object
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
 				<ul>
-					<li>Purpose:</li>
-					<ul>
-						<li>
-						Create an ArrayList of UserListQuery EBOs based on a passed in string value to search on as well as an offset and limit of results to return (if paginating). This could be altered to have the parameter fields passed in as a new EBO that has those fields.
-						</li>
-					</ul>
-				</ul>				
-			</li>
+					<li>
+					Sets data on a business object for a specific user based on ID.
+					</li>
+				</ul>
+			</ul>			
+		</ul>		
+
+		<ul>
+			<li class="method">retrieveUsersByQuery()</li>
+			<ul>
+				<li>Called by:</li>
+				<ul>
+					<li>Query.retrieveUsersByQuery()	</li>
+				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
+				<ul>
+					<li>String representing search query</li>
+					<li>Integer for offset</li>
+					<li>Integer for limit</li>
+				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
+				<ul>
+					<li>
+						ArrayList of UserListQuery EBOs
+					</li>
+				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
+				<ul>
+					<li>
+					Create an ArrayList of UserListQuery EBOs based on a passed in string value to search on as well as an offset and limit of results to return (if paginating). This could be altered to have the parameter fields passed in as a new EBO that has those fields.
+					</li>
+				</ul>
+			</ul>	
 		</ul>
 
 		<ul>
-			<li class="method">
-				retrieveAllUsers()
+			<li class="method">retrieveAllUsers()</li>
+			<ul>
+				<li>Called by:</li>
 				<ul>
-					<li>Called by:</li>
-					<ul>
-						<li>
-							ViewMany.retrieveAllUsers()
-						</li>
-					</ul>
+					<li>
+						Query.retrieveAllUsers()
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
 				<ul>
-					<li>Params:</li>
-					<ul>
-						<li>Integer for offset</li>
-						<li>Integer for limit</li>
-					</ul>
+					<li>Integer for offset</li>
+					<li>Integer for limit</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
 				<ul>
-					<li>Returns:</li>
-					<ul>
-						<li>
-							ArrayList of UserListQuery EBOs
-						</li>
-					</ul>
+					<li>
+						ArrayList of UserListQuery EBOs
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
 				<ul>
-					<li>Purpose:</li>
-					<ul>
-						<li>
-							Create an ArrayList of UserListQuery EBOs based on passed in values for limit and offset. This list will come from the list of all users. This will allow for pagination of the results.
-						</li>
-					</ul>
-				</ul>				
-			</li>
+					<li>
+						Create an ArrayList of UserListQuery EBOs based on passed in values for limit and offset. This list will come from the list of all users. This will allow for pagination of the results.
+					</li>
+				</ul>
+			</ul>
 		</ul>		
 
 		<ul>
-			<li class="method">
-				updateUser()
+			<li class="method">updateUser()</li>
+			<ul>
+				<li>Called by:</li>
 				<ul>
-					<li>Called by:</li>
-					<ul>
-						<li>
-							AddEdit.saveUser()
-						</li>
-					</ul>
+					<li>
+						File.saveUser()
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
 				<ul>
-					<li>Params:</li>
-					<ul>
-						<li>UserForm Business Object</li>
-					</ul>
+					<li>UserForm Business Object</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
 				<ul>
-					<li>Returns:</li>
-					<ul>
-						<li>
-							id of user to be used for display after database transaction has completed
-						</li>
-					</ul>
+					<li>
+						id of user to be used for display after database transaction has completed
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
 				<ul>
-					<li>Purpose:</li>
-					<ul>
-						<li>
-							Updates an existing user's data in the database. Returns the id of the user that will be used to display the result when requeried from an action redirect.
-						</li>
-					</ul>
-				</ul>				
-			</li>
+					<li>
+						Updates an existing user's data in the database. Returns the id of the user that will be used to display the result when requeried from an action redirect.
+					</li>
+				</ul>
+			</ul>	
 		</ul>		
 
 		<ul>
-			<li class="method">
-				insertUser()
+			<li class="method">insertUser()</li>
+			<ul>
+				<li>Called by:</li>
 				<ul>
-					<li>Called by:</li>
-					<ul>
-						<li>
-							AddEdit.saveUser()
-						</li>
-					</ul>
+					<li>
+						File.saveUser()
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
 				<ul>
-					<li>Params:</li>
-					<ul>
-						<li>
-							UserForm Business Object
-						</li>
-					</ul>
+					<li>
+						UserForm Business Object
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
 				<ul>
-					<li>Returns:</li>
-					<ul>
-						<li>
-							id of user to be used for display after database transaction has completed	
-						</li>
-					</ul>
+					<li>
+						id of user to be used for display after database transaction has completed	
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
 				<ul>
-					<li>Purpose:</li>
-					<ul>
-						<li>
-							Adds a new user's data to the database. Returns the id of the user that will be used to display the result when requeried from an action redirect.					
-						</li>
-					</ul>
-				</ul>				
-			</li>
+					<li>
+						Adds a new user's data to the database. Returns the id of the user that will be used to display the result when requeried from an action redirect.					
+					</li>
+				</ul>
+			</ul>
 		</ul>	
 
 		<ul>
-			<li class="method">
-				removeUser()
+			<li class="method">removeUser()</li>
+			<ul>
+				<li>Called by:</li>
 				<ul>
-					<li>Called by:</li>
-					<ul>
-						<li>
-							AddEdit.deleteUser()
-						</li>
-					</ul>
+					<li>
+						File.deleteUser()
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
 				<ul>
-					<li>Params:</li>
-					<ul>
-						<li>
-							UserForm Business Object
-						</li>
-					</ul>
+					<li>
+						UserForm Business Object
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
 				<ul>
-					<li>Returns:</li>
-					<ul>
-						<li>
-							void
-						</li>
-					</ul>
+					<li>
+						void
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
 				<ul>
-					<li>Purpose:</li>
-					<ul>
-						<li>
-							Remove a single record form the database based on ID.
-						</li>
-					</ul>
-				</ul>				
-			</li>
+					<li>
+						Remove a single record form the database based on ID.
+					</li>
+				</ul>
+			</ul>
 		</ul>			
 
 		<ul>
-			<li class="method">
-				prepare()
+			<li class="method">prepare()</li>
+			<ul>
+				<li>Called by:</li>
 				<ul>
-					<li>Called by:</li>
-					<ul>
-						<li>
-							
-						</li>
-					</ul>
+					<li>
+						other util service methods
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
 				<ul>
-					<li>Params:</li>
-					<ul>
-						<li>
+					<li>
 
-						</li>
-					</ul>
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
 				<ul>
-					<li>Returns:</li>
-					<ul>
-						<li>
-							
-						</li>
-					</ul>
-				</ul>
-				<ul>
-					<li>Purpose:</li>
-					<ul>
-						<li>
+					<li>
 						
-						</li>
-					</ul>
-				</ul>				
-			</li>
+					</li>
+				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
+				<ul>
+					<li>
+					
+					</li>
+				</ul>
+			</ul>
 		</ul>	
 
 		<ul>
-			<li class="method">
-				validate()
+			<li class="method">validate()</li>
+			<ul>
+				<li>Called by:</li>
 				<ul>
-					<li>Called by:</li>
-					<ul>
-						<li>
-							
-						</li>
-					</ul>
+					<li>
+						other util service methods
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Params:</li>
 				<ul>
-					<li>Params:</li>
-					<ul>
-						<li>
+					<li>
 
-						</li>
-					</ul>
+					</li>
 				</ul>
+			</ul>
+			<ul>
+				<li>Returns:</li>
 				<ul>
-					<li>Returns:</li>
-					<ul>
-						<li>
-							
-						</li>
-					</ul>
-				</ul>
-				<ul>
-					<li>Purpose:</li>
-					<ul>
-						<li>
+					<li>
 						
-						</li>
-					</ul>
-				</ul>				
-			</li>
+					</li>
+				</ul>
+			</ul>
+			<ul>
+				<li>Purpose:</li>
+				<ul>
+					<li>
+					
+					</li>
+				</ul>
+			</ul>	
 		</ul>			
 
 	</body>

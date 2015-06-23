@@ -3,7 +3,7 @@
 		"Create": {
 			"SourceJSP": {"1": "home.jsp"},
 			"DestinationJSP": {"1":"edit.jsp"},
-			"ActionClass": {"1": "AddEdit"},
+			"ActionClass": {"1": "File"},
 			"ActionMethod": {"1": "createUser()"},
 			"Goal": {"1":"Add a new user to database"},
 			"DBType": {"1":"None"},
@@ -12,61 +12,61 @@
 		"Edit": {			
 			"SourceJSP": {"1": "home.jsp", "2": "view.jsp", "3": "search.jsp"},
 			"DestinationJSP": {"1":"edit.jsp"},
-			"ActionClass": {"1": "AddEdit"},
+			"ActionClass": {"1": "File"},
 			"ActionMethod": {"1": "editUser()"},			
 			"Goal": {"1":"Update existing user data"},
-			"DBType": {"1":"Query"},
-			"ExplicitBO": {"1": "IdQuery","2": "UserForm"}
+			"DBType": {"1":"Retrieve"},
+			"ExplicitBO": {"1": "UserForm"}
 		},
 		"Delete": {
 			"SourceJSP": {"1": "home.jsp", "2": "view.jsp", "3":"search.jsp"},
 			"DestinationJSP": {"1":"home.jsp"},
-			"ActionClass": {"1": "AddEdit"},
+			"ActionClass": {"1": "File"},
 			"ActionMethod": {"1": "deleteUser()"},			
 			"Goal": {"1":"Remove a user from database"},
 			"DBType": {"1":"Submission"},
-			"ExplicitBO": {"1": "IdQuery", "2": "UserForm"}
+			"ExplicitBO": {"1": "UserView"}
 		},
 		"Search": {
 			"SourceJSP": {"1":"home.jsp","2": "search.jsp"},
 			"DestinationJSP": {"1":"search.jsp"},
-			"ActionClass": {"1": "ViewMany"},
+			"ActionClass": {"1": "Query"},
 			"ActionMethod": {"1": "retrieveUsersQuery()"},				
 			"Goal": {"1":"Display database results from search string"},
 			"DBType": {"1":"Query"},
-			"ExplicitBO": {"1": "UserListQuery"}
+			"ExplicitBO": {"1": "UserQuery"}
 		},
 		"ViewSingle": {
 			"SourceJSP": {"1":"home.jsp","2": "edit.jsp","3":"search.jsp"},
 			"DestinationJSP": {"1":"view.jsp"},
-			"ActionClass": {"1": "ViewUser"},
+			"ActionClass": {"1": "File"},
 			"ActionMethod": {"1": "retrieveUserById()"},				
 			"Goal": {"1":"View all details of a single user"},
-			"DBType": {"1":"Query"},
-			"ExplicitBO": {"1": "UserQuery"}
+			"DBType": {"1":"Retrieve"},
+			"ExplicitBO": {"1": "UserView"}
 		},
 		"ViewAll": {
 			"SourceJSP": {"1":"home.jsp","2":"view.jsp","3":"edit.jsp"},
 			"DestinationJSP": {"1":"home.jsp"},
-			"ActionClass": {"1": "ViewMany"},
+			"ActionClass": {"1": "Query"},
 			"ActionMethod": {"1": "retrieveAllUsers()"},				
 			"Goal": {"1":"View paginated list of all users"},
-			"DBType": {"1":"Submission"},
-			"ExplicitBO": {"1": "UserListQuery"}
+			"DBType": {"1":"Query"},
+			"ExplicitBO": {"1": "UserView"}
 		},
 		"Pagination": {
 			"SourceJSP": {"1":"home.jsp","2":"search.jsp"},
 			"DestinationJSP": {"1":"home.jsp","2":"search.jsp"},
-			"ActionClass": {"1": "ViewMany"},
+			"ActionClass": {"1": "Query"},
 			"ActionMethod": {"1": "retrieveAllUsers()"},				
 			"Goal": {"1":"View next/previous set of queried data"},
 			"DBType": {"1":"Query"},
-			"ExplicitBO": {"1": "UserListQuery"}			
+			"ExplicitBO": {"1": "UserView"}			
 		},
 		"Save": {
 			"SourceJSP": {"1":"edit.jsp"},
 			"DestinationJSP": {"1":"view.jsp"},
-			"ActionClass": {"1": "AddEdit"},
+			"ActionClass": {"1": "File"},
 			"ActionMethod": {"1": "saveUser()"},			
 			"Goal": {"1":"Submit form data for new user or update of existing user"},
 			"DBType": {"1":"Submission"},
