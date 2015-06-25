@@ -2,15 +2,27 @@
 $(document).ready(function(){
 	// do stuff when DOM is ready
 
+	// this is required for tooltips. to use them, just add a title attribute to an element
+	$(document).tooltip();
+
 	//$("#textInput").text("");
 	$("#textInput").val("");
+
+	$("#subBtn").click(function(){
+		if ($("#nameText").val() == "") {
+			$("#nameText").addClass("reqField");
+		}
+		else {
+			$("#nameText").removeClass("reqField");
+		}
+	});
 
 	// click event added
 	$("#mydiv").click(function() {
 		alert("Hello, world!");
 	});
 
-	$("p").css("background-color", "yellow"); // make paragraph backgrounds yellow
+	$("#highlightP > p").css("background-color", "yellow"); // make paragraph backgrounds yellow
 
 	var title = $("em").attr("title");
 	$("#divid").text(title);

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+		<title>Skeleton Project Actions</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	
+
+		<script>
+			$(document).ready(function(){
+				//alert("hello");
+				$("#wrapper").children("div:even").css("background-color", "#F9EE9A");
+
+				$("#wrapper").children("div:odd").css("background-color", "#FCF5C2");
+
+				$("#wrapper").children("div").css("width", "470px");
+
+				$("#listHead").css("background-color", "#ccc");				
+
+			});
+		</script>	
+		<style>
+			.fltlft{float:left;}
+			.clrflt{clear:both;}
+			.padme{margin-left: 10px;margin-right:5px;margin-top:5px;margin-bottom:5px;}
+			.nameDiv {width: 150px; font-weight:bold; color:blue;}
+			.userDiv {width: 100px; font-weight:bold;}
+			.idDiv {width: 20px; font-weight:bold;}
+			.redBtn {background-color:red;color:white; border-radius: 10px;}
+			.blueBtn {background-color:blue;color:white;border-radius: 10px;}
+			.smdets {font-size:10pt;font-style:italic;}
+			.resultDiv {border: #ccc solid 1px;}
+		</style>
+
+	</head>	
+
+	<body>
+		<h1>Users</h1>
+
+		<div id="wrapper">
+			<div class="resultDiv" id="listHead" style="float: left;">	
+				<div class="fltlft padme idDiv" style="color:black;">ID</div>
+				<div class="fltlft padme nameDiv" style="color:black;">Name</div>
+				<div class="fltlft padme userDiv">Username</div>
+			</div>
+			<br class="clrflt">
+			<div class="resultDiv" style="float: left;">
+				<div class="fltlft padme idDiv">256</div>		
+				<div class="fltlft padme nameDiv">Jim Jenkins</div>
+				<div class="fltlft padme userDiv">jjenk</div>
+				<button class="padme blueBtn" type="button">Edit</button>
+				<button class="padme redBtn" type="button">Delete</button>
+				<div style="margin-top:-30px;">
+					<ul class="smdets clrflt">
+						<li>Company: Widgets Inc.</li>
+						<li>Department: Widget Testing</li>
+						<li>Email: jjenk@widgets.biz</li>
+						<li>Mobile: (234)-456-7345</li> 
+					</ul>
+				</div>				
+			</div>
+			<br class="clrflt">
+			<div class="resultDiv" style="float: left;">
+				<div class="fltlft padme idDiv">5</div>			
+				<div class="fltlft padme nameDiv">Joey Joe Joe</div>
+				<div class="fltlft padme userDiv">jjjjshabadoo</div>
+				<button class="padme blueBtn" type="button">Edit</button>
+				<button class="padme redBtn" type="button">Delete</button>
+				<div style="margin-top:-30px;">
+					<ul class="smdets clrflt">
+						<li>Company: Widgets Inc.</li>
+						<li>Department: Widget Tasting</li>
+						<li>Email: jjjoe@widgets.biz</li>
+						<li>Mobile: (234)-456-7345</li> 
+					</ul>
+				</div>						
+			</div>
+			<br class="clrflt">
+			<div class="resultDiv" style="float: left;">
+				<div class="fltlft padme idDiv">19</div>			
+				<div class="fltlft padme nameDiv">Joeseph Collins</div>
+				<div class="fltlft padme userDiv">jcolz</div>
+				<button class="padme blueBtn" type="button">Edit</button>
+				<button class="padme redBtn" type="button">Delete</button>
+				<div style="margin-top:-30px;">
+					<ul class="smdets clrflt">
+						<li>Company: Widgets Inc.</li>
+						<li>Department: Widget Production</li>
+						<li>Email: jcolz@widgets.biz</li>
+						<li>Mobile: (234)-456-7345</li> 
+					</ul>
+				</div>						
+			</div>
+			<br class="clrflt">
+			<div class="resultDiv" style="float: left;">
+				<div class="fltlft padme idDiv">78</div>			
+				<div class="fltlft padme nameDiv">Junior Talken</div>
+				<div class="fltlft padme userDiv">talker</div>
+				<button class="padme blueBtn" type="button">Edit</button>
+				<button class="padme redBtn" type="button">Delete</button>
+				<div style="margin-top:-30px;">
+					<ul class="smdets clrflt">
+						<li>Company: Acme Corp.</li>
+						<li>Department: Rocket Rider</li>
+						<li>Email: talker@acme.com</li>
+						<li>Mobile: (234)-456-7345</li> 
+					</ul>
+				</div>						
+			</div>
+			<br class="clrflt">
+			<div class="resultDiv" style="float: left;">
+				<div class="fltlft padme idDiv">196</div>			
+				<div class="fltlft padme nameDiv">Kris Vermhat</div>
+				<div class="fltlft padme userDiv">vermhat</div>
+				<button class="padme blueBtn" type="button">Edit</button>
+				<button class="padme redBtn" type="button">Delete</button>
+				<div style="margin-top:-30px;">
+					<ul class="smdets clrflt">
+						<li>Company: Acme Corp.</li>
+						<li>Department: Roadrunner Chaser</li>
+						<li>Email: vermhat@acme.com</li>
+						<li>Mobile: (234)-456-7345</li> 
+					</ul>
+				</div>						
+			</div>			
+		</div>
+
+	</body>
+
+	
+</html>

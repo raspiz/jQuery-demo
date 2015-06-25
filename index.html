@@ -1,14 +1,20 @@
 <!doctype html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<!--<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>-->
+		
 
-		<title>Some jQuery Stuff</title>
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-		</script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+		<link rel="stylesheet" href="./jquery/jquery-ui-1.11.4.custom/jquery-ui.min.css">	
+		<script src="./jquery/jquery-ui-1.11.4.custom/external/jquery/jquery.js"></script>
+		<script src="./jquery/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+
 
 		<script type="text/javascript" src="./js/custom.js"></script>
+		<title>Some jQuery Stuff</title>
 	
 		<style>
 			.selected { color:red; }
@@ -16,6 +22,7 @@
 			.prettyList {background:#99CCFF;font-size:14;}
 			.dfGuys li{border:black solid 1px; list-style-type:none; width:335px; background:#FFCC99; margin-top:5px;}
 			.fakeLink {color:blue; display:inline-block;cursor:pointer;}
+			.reqField{border:red solid 1px;background-color:#F9C2C2;}
 		</style>
 
 	</head>	
@@ -23,6 +30,28 @@
 	<body>
 		<h1>Hello</h1>
 
+		<div id="alertPanel" class="ui-widget">
+			<div class="ui-state-error ui-corner-all" style="padding: 0 .7em;">
+				<p>
+					<span class="ui-icon ui-icon-alert" style="float:left; margin-right: .3em;"></span>
+					<strong>Alert:</strong>
+					This is not a test
+				</p>
+			</div>
+		</div>
+
+		<br>
+
+		<div id="highlightPanel" class="ui-widget">
+			<div class="ui-state-highlight ui-corner-all" style="padding: 0 .7em;">
+				<p>
+					<span class="ui-icon ui-icon-info" style="float:left; margin-right: .3em;"></span>
+					<strong>Hey!</strong>
+					Actually, this is a test!
+				</p>
+			</div>
+		</div>		
+		<br>
 		<div>
 			<textarea id="textInput" rows="3" cols="50" placeholder="Enter jQuery here!" ></textarea>
 		</div>
@@ -32,6 +61,11 @@
 			</button>
 		</div>
 
+		<label for"nameText">First Name:</label>
+		<input id="nameText" type="text" title="Please enter your first name." style="border-radius:10px;"/> 
+		<input id="subBtn" type="button" value="Submit"/>
+		<br>
+
 
 		<input type="hidden" name="foo" value="bar">
 
@@ -39,7 +73,7 @@
 			Click on this to see a dialogue box.
 		</div>
 
-		<div>
+		<div id="highlightP">
 			<em title="Bold and Brave">This is the first paragraph.</em>
 			<p class="myclass">This is a paragraph.</p>
 			<p id="myid">This is a second paragraph.</p>
@@ -79,6 +113,9 @@
 			<br><br>
 			<button id="dfBtn">Tell me about Dataforma</button>
 			<button id="dfPagin">Paginate results</button>
+			<button>
+				<span class="ui-icon ui-icon-search" style="float:left; margin-right: .3em;"></span>Search
+			</button>
 		<div>	
 
 		<div id="dfList"></div>
